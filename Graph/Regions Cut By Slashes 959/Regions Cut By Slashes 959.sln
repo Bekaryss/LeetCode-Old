@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Regions Cut By Slashes 959", "Regions Cut By Slashes 959\Regions Cut By Slashes 959.vcxproj", "{C03FD538-4D05-4E42-8F5E-2664003ED68A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C03FD538-4D05-4E42-8F5E-2664003ED68A}.Debug|x64.ActiveCfg = Debug|x64
+		{C03FD538-4D05-4E42-8F5E-2664003ED68A}.Debug|x64.Build.0 = Debug|x64
+		{C03FD538-4D05-4E42-8F5E-2664003ED68A}.Debug|x86.ActiveCfg = Debug|Win32
+		{C03FD538-4D05-4E42-8F5E-2664003ED68A}.Debug|x86.Build.0 = Debug|Win32
+		{C03FD538-4D05-4E42-8F5E-2664003ED68A}.Release|x64.ActiveCfg = Release|x64
+		{C03FD538-4D05-4E42-8F5E-2664003ED68A}.Release|x64.Build.0 = Release|x64
+		{C03FD538-4D05-4E42-8F5E-2664003ED68A}.Release|x86.ActiveCfg = Release|Win32
+		{C03FD538-4D05-4E42-8F5E-2664003ED68A}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE483CF4-64C9-4D0A-998C-A7E47E0C1BC2}
+	EndGlobalSection
+EndGlobal

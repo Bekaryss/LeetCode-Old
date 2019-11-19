@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Swap Nodes in Pairs 24", "Swap Nodes in Pairs 24\Swap Nodes in Pairs 24.vcxproj", "{39ACE84D-349A-47BC-80E6-023EC7E09676}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39ACE84D-349A-47BC-80E6-023EC7E09676}.Debug|x64.ActiveCfg = Debug|x64
+		{39ACE84D-349A-47BC-80E6-023EC7E09676}.Debug|x64.Build.0 = Debug|x64
+		{39ACE84D-349A-47BC-80E6-023EC7E09676}.Debug|x86.ActiveCfg = Debug|Win32
+		{39ACE84D-349A-47BC-80E6-023EC7E09676}.Debug|x86.Build.0 = Debug|Win32
+		{39ACE84D-349A-47BC-80E6-023EC7E09676}.Release|x64.ActiveCfg = Release|x64
+		{39ACE84D-349A-47BC-80E6-023EC7E09676}.Release|x64.Build.0 = Release|x64
+		{39ACE84D-349A-47BC-80E6-023EC7E09676}.Release|x86.ActiveCfg = Release|Win32
+		{39ACE84D-349A-47BC-80E6-023EC7E09676}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7531E9D-B32A-40B4-8600-F22CF0D1B1EE}
+	EndGlobalSection
+EndGlobal
