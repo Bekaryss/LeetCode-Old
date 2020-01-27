@@ -1,40 +1,60 @@
-﻿// Sort Array By Parity II 922.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// Uncommon Words from Two Sentences 884.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
 #include <vector>
+#include <string>
+#include <unordered_map>
+#include <sstream>
 
 using namespace std;
 
-vector<int> sortArrayByParityII(vector<int>& A) {
-	vector<int> ans(A.size());
-	int a = 0, b = 1;
-	for (int i = 0; i < A.size(); i++) {
-		if (A[i] % 2 == 0) {
-			if (a < A.size()) {
-				ans[a] = A[i];
-				a += 2;
-			}
-		}
-		else {
-			if (b < A.size()) {
-				ans[b] = A[i];
-				b += 2;
-			}
+void GetWords(string s, unordered_map<string, int>& words) {
+	int last = 0;
+	for (int i = 0; i < s.size(); ++i) {
+		if (s[i] == ' ' || i == s.size()) {
+			words[s.substr(last, i - last)]++;
+			last = i + 1;
 		}
 	}
-	return ans;
+	words[s.substr(last, s.size() - last)]++;
+}
+
+vector<string> uncommonFromSentences(string A, string B) {
+	vector<string> res;
+	unordered_map<string, int> map;
+	GetWords(A, map);
+	GetWords(B, map);
+	for (auto i : map) {
+		if (i.second == 1) {
+			res.push_back(i.first);
+		}
+	}
+	return res;
+}
+
+vector<string> uncommonFromSentencesSolution(string A, string B) {
+	unordered_map<string, int> count;
+	istringstream iss(A + " " + B);
+	while (iss >> A) count[A]++;
+	vector<string> res;
+	for (auto w : count)
+		if (w.second == 1)
+			res.push_back(w.first);
+	return res;
+}
+
+void PrintRes(vector<string> res) {
+	for (string s : res) {
+		cout << s << " ";
+	}
+	cout << endl;
 }
 
 int main()
 {
-	vector<int> input = { 4,2,5,7 };
-	vector<int> ans = sortArrayByParityII(input);
-	for (int i = 0; i < ans.size(); i++)
-	{
-		cout << ans[i] << " ";
-	}
-    std::cout << "Hello World!\n";
+	string A = "this apple is sweet", B = "this apple is sour";
+	PrintRes(uncommonFromSentencesSolution(A, B));
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

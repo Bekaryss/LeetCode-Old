@@ -1,4 +1,4 @@
-﻿// Sort Array By Parity II 922.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// Island Perimeter 463.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
@@ -6,35 +6,38 @@
 
 using namespace std;
 
-vector<int> sortArrayByParityII(vector<int>& A) {
-	vector<int> ans(A.size());
-	int a = 0, b = 1;
-	for (int i = 0; i < A.size(); i++) {
-		if (A[i] % 2 == 0) {
-			if (a < A.size()) {
-				ans[a] = A[i];
-				a += 2;
-			}
-		}
-		else {
-			if (b < A.size()) {
-				ans[b] = A[i];
-				b += 2;
+int islandPerimeter(vector<vector<int>>& grid) {
+	int p = 0;
+	for (int i = 0; i < grid.size(); i++) {
+		for (int j = 0; j < grid[i].size(); j++) {
+			int shape = 4;
+			if (grid[i][j] == 1) {
+				if (i > 0 && grid[i-1][j] == 1) {
+					shape--;
+				}
+				if (j > 0 && grid[i][j - 1] == 1) {
+					shape--;
+				}
+				if (i < grid.size()-1 && grid[i + 1][j] == 1) {
+					shape--;
+				}
+				if (j < grid[i].size() - 1 && grid[i][j+1] == 1) {
+					shape--;
+				}
+				p += shape;
 			}
 		}
 	}
-	return ans;
+	return p;
 }
 
 int main()
 {
-	vector<int> input = { 4,2,5,7 };
-	vector<int> ans = sortArrayByParityII(input);
-	for (int i = 0; i < ans.size(); i++)
-	{
-		cout << ans[i] << " ";
-	}
-    std::cout << "Hello World!\n";
+	vector<vector<int>> input = { {0, 1, 0, 0},
+		{1, 1, 1, 0},
+		{0, 1, 0, 0},
+		{1, 1, 0, 0} };
+	std::cout << islandPerimeter(input) << endl;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
