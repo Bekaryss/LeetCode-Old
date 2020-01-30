@@ -1,0 +1,61 @@
+// Find Words That Can Be Formed by Characters 1160.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <unordered_map>
+
+using namespace std;
+
+int countCharacters(vector<string>& words, string chars) {
+    unordered_map<char, int> charsNum, charsCopy;
+    for (char i : chars) {
+        charsNum[i]++;
+    }
+    int res = 0;
+    for (string i : words) {
+        charsCopy = charsNum;
+        bool good = true;
+        for (char j : i) {
+            if (charsCopy.find(j) != charsCopy.end()) {
+                if (charsCopy[j] > 0) {
+                    charsCopy[j]--;
+                }
+                else {
+                    good = false;
+                }
+            }
+            else {
+                good = false;
+                break;
+            }
+        }
+        if (good == true) {
+            res += i.size();
+        }
+    }
+    return res;
+}
+
+int main()
+{
+    vector<string> words = { "cat", "bt", "hat", "tree" };
+    string chars = "atach";
+    std::cout << countCharacters(words, chars) << endl;
+
+    words = { "hello","world","leetcode" };
+    chars = "welldonehoneyr";
+    std::cout << countCharacters(words, chars) << endl;
+}
+
+// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+// Debug program: F5 or Debug > Start Debugging menu
+
+// Tips for Getting Started: 
+//   1. Use the Solution Explorer window to add/manage files
+//   2. Use the Team Explorer window to connect to source control
+//   3. Use the Output window to see build output and other messages
+//   4. Use the Error List window to view errors
+//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
+//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
