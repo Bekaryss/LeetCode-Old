@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Moving Stones Until Consecutive II 1040.cpp">
+    <ClCompile Include="Grumpy Bookstore Owner 1052.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

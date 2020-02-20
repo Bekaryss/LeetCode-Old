@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{E2111FDE-4062-4AA3-91D8-C878518D89D8}</ProjectGuid>
+    <ProjectGuid>{FCB933C3-1759-4595-8A9B-1A9FE4E9CDB2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>MovingStonesUntilConsecutiveII1040</RootNamespace>
+    <RootNamespace>GrumpyBookstoreOwner1052</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -147,7 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Moving Stones Until Consecutive II 1040.cpp" />
+    <ClCompile Include="Grumpy Bookstore Owner 1052.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
