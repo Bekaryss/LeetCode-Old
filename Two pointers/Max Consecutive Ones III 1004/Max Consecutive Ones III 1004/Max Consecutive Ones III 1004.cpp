@@ -7,30 +7,15 @@
 
 using namespace std;
 
-int longestOnesS(vector<int>& A, int K) {
-    int i = 0, j;
-    for (j = 0; j < A.size(); ++j) {
-        if (A[j] == 0) K--;
-        if (K < 0 && A[i++] == 0) K++;
-    }
-    return j - i;
-}
-
 int longestOnes(vector<int>& A, int K) {
-    int i = 0, j = 0, len = 0;
-    while (i < A.size()) {
-        while (i < A.size() && (K >= 0)) {
-            K -= A[i] == 1 ? 0 : 1;
-            if (K >= 0)
-                len = max(len, i - j + 1);
-            i++;
-        }
-        while (j <= i && K < 0) {
-            K += A[j] == 1 ? 0 : 1;
-            j++;
-        }
+    int i = 0, j = 0;
+    for (; i < A.size(); i++) {
+        if (A[i] == 0)
+            K--;
+        if (K < 0 && A[j++] == 0)
+            K++;
     }
-    return len;
+    return i - j;
 }
 
 int main()
