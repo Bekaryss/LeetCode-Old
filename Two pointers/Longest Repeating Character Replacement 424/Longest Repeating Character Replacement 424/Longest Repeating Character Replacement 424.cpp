@@ -9,18 +9,15 @@
 using namespace std;
 
 int characterReplacement(string s, int k) {
-	int n = s.size();
-	vector<int> char_counts(26);
-	int i = 0, res = 0, max_count = 0;
-	for (int j = 0; j < n; j++) {
-		char_counts[s[j] - 'A']++;
-		max_count = max(max_count, char_counts[s[j] - 'A']);
-		while (j - i - max_count + 1 > k) {
-			char_counts[s[i] - 'A']--;
-			i++;
+	int n = s.size(), i = 0, j = 0, maxCount = 0, res = 0;
+	vector<int> counter(26);
+	for (; i < n; i++) {
+		maxCount = max(maxCount, ++counter[s[i] - 'A']);
+		while (i - j + 1 - maxCount > k) {
+			counter[s[j] - 'A']--;
+			j++;
 		}
-
-		res = max(res, j - i + 1);
+		res = max(res, i - j + 1);
 	}
 	return res;
 }
