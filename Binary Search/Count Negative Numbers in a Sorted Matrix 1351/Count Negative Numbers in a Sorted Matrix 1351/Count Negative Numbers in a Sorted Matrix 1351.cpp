@@ -28,10 +28,10 @@ int countNegativesBS(vector<vector<int>>& grid) {
 		while (l <= r) {
 			int mid = (l + r) / 2;
 			if (grid[i][mid] < 0) {
-				r--;
+				r = mid - 1;
 			}
 			else {
-				l++;
+				l = mid + 1;
 			}
 		}
 		count += (grid[i].size() - l);
@@ -48,7 +48,7 @@ int main()
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
+// Tips for Getting Started:
 //   1. Use the Solution Explorer window to add/manage files
 //   2. Use the Team Explorer window to connect to source control
 //   3. Use the Output window to see build output and other messages
