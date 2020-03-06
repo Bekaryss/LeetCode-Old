@@ -39,10 +39,27 @@ int countNegativesBS(vector<vector<int>>& grid) {
 	return count;
 }
 
+int countNegativesMN(vector<vector<int>>& grid) {
+	if (grid.empty() || grid[0].empty())
+		return 0;
+	int m = grid.size(), n = grid[0].size();
+	int i = m - 1, j = 0, counter = 0;
+	while (i >= 0 && j < n) {
+		if (grid[i][j] < 0) {
+			i--;
+			counter += (n - j);
+		}
+		else {
+			j++;
+		}
+	}
+	return counter;
+}
+
 int main()
 {
 	vector<vector<int>> input = { {4, 3, 2, -1}, {3, 2, 1, -1}, {1, 1, -1, -2}, {-1, -1, -2, -3} };
-	std::cout << countNegativesBS(input) << endl;
+	std::cout << countNegativesMN(input) << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
