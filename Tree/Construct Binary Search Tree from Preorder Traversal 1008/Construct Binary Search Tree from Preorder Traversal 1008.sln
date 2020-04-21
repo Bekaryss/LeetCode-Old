@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Construct Binary Search Tree from Preorder Traversal 1008", "Construct Binary Search Tree from Preorder Traversal 1008\Construct Binary Search Tree from Preorder Traversal 1008.vcxproj", "{AF21A2A0-88A2-4109-9124-B78488DB3E3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF21A2A0-88A2-4109-9124-B78488DB3E3C}.Debug|x64.ActiveCfg = Debug|x64
+		{AF21A2A0-88A2-4109-9124-B78488DB3E3C}.Debug|x64.Build.0 = Debug|x64
+		{AF21A2A0-88A2-4109-9124-B78488DB3E3C}.Debug|x86.ActiveCfg = Debug|Win32
+		{AF21A2A0-88A2-4109-9124-B78488DB3E3C}.Debug|x86.Build.0 = Debug|Win32
+		{AF21A2A0-88A2-4109-9124-B78488DB3E3C}.Release|x64.ActiveCfg = Release|x64
+		{AF21A2A0-88A2-4109-9124-B78488DB3E3C}.Release|x64.Build.0 = Release|x64
+		{AF21A2A0-88A2-4109-9124-B78488DB3E3C}.Release|x86.ActiveCfg = Release|Win32
+		{AF21A2A0-88A2-4109-9124-B78488DB3E3C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A41ED4F1-3952-4AA2-AC18-76F63ACCE1FA}
+	EndGlobalSection
+EndGlobal
